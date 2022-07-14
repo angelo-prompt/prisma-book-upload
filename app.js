@@ -39,12 +39,6 @@ app.get('/categories', async (req, res) => {
     return res.json(books);
 })
 
-// Get all categories on books:
-app.get('/categories-on-books', async (req, res) => {
-    const categoriesOnBooks = await prisma.categoriesOnBooks.findMany();
-    return res.json(categoriesOnBooks);
-})
-
 // Get author by its id and get its books:
 app.get('/authors/:authorId', async (req, res) => {
 
